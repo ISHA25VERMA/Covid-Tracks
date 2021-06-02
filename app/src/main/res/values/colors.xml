@@ -13,6 +13,9 @@
     <color name="light_blue">#BBDEFB</color>
     <color name="light_yellow">#FFECB3</color>
 
+    <color name="healing">#FF908E</color>
+    <color name="death">#002C56</color>
+
     <color name="dark_red">#D32F2F</color>
     <color name="dark_green">#388E3C</color>
     <color name="dark_blue">#1976D2</color>

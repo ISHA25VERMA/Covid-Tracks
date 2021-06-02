@@ -3,45 +3,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="horizontal"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
 
     <TextView
         android:id="@+id/state"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="2"
         android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
         android:fontFamily="sans-serif-medium"
-        android:textSize="24sp"
         android:text="Chandigarh" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/confirmed"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_weight="1"
+        android:textColor="@color/dark_red"
+        android:layout_gravity="center"
+        android:text="1234c" />
 
-        <TextView
-            android:id="@+id/confirmed"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:text="1234c" />
+    <TextView
+        android:id="@+id/recovered"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/healing"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:text="234" />
 
-        <TextView
-            android:id="@+id/recovered"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:text="234" />
+    <TextView
+        android:id="@+id/death"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/death"
+        android:text="1234c"
+        android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/death"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:text="1234c" />
-    </LinearLayout>
 
 </LinearLayout>
