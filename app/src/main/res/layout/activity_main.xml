@@ -8,51 +8,52 @@
     android:padding="16dp">
 
     <!-- Empty view is only visible when the list has no items. -->
-    <TextView
-        android:id="@+id/empty_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="No data"
-        android:textAppearance="?android:textAppearanceMedium" />
+<!--    <TextView-->
+<!--        android:id="@+id/empty_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="No data"-->
+<!--        android:textAppearance="?android:textAppearanceMedium" />-->
 
     <!-- Loading indicator is only shown before the first load -->
-    <ProgressBar
-        android:id="@+id/loading_indicator"
-        style="@style/Widget.AppCompat.ProgressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+<!--    <ProgressBar-->
+<!--        android:id="@+id/loading_indicator"-->
+<!--        style="@style/Widget.AppCompat.ProgressBar"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"/>-->
 
     <!-- Empty view is only visible when the list has no items. -->
-    <TextView
-        android:id="@+id/no_internet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:text="No internet connection"
-        android:textAppearance="?android:textAppearanceMedium" />
+<!--    <TextView-->
+<!--        android:id="@+id/no_internet"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:text="No internet connection"-->
+<!--        android:textAppearance="?android:textAppearanceMedium" />-->
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:textStyle="italic"
-        android:text="Last updated seconds ago"
-        android:layout_alignParentEnd="true" />
+<!--    <TextView-->
+<!--        android:id="@+id/time"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:textStyle="italic"-->
+<!--        android:text="Last updated seconds ago"-->
+<!--        android:layout_alignParentEnd="true" />-->
 
 
     <LinearLayout
         android:id="@+id/topContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:baselineAligned="false"
         android:orientation="horizontal"
-        android:layout_below="@id/time"
         android:paddingTop="16dp"
-        android:baselineAligned="false">
+        android:layout_alignParentTop="true">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -65,102 +66,111 @@
                 android:layout_gravity="center"
                 android:text="@string/confirmed"
                 android:theme="@style/Upper_text" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/baseline_coronavirus_black_36"
-                app:tint="@color/dark_red"
-                android:layout_gravity="center"/>
+                app:tint="@color/dark_red" />
+
             <TextView
                 android:id="@+id/confirmedC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:paddingTop="8dp"
                 android:textColor="@color/dark_red"
-                tools:text="1234"
-                android:layout_gravity="center"/>
+                tools:text="1234" />
 
 
         </LinearLayout>
-<!--        <LinearLayout-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_weight="1"-->
-<!--            android:orientation="vertical">-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:theme="@style/Upper_text"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:text="Active" />-->
-<!--            <ImageView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:src="@drawable/active"-->
-<!--                app:tint="@color/dark_red"-->
-<!--                android:layout_gravity="center"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:paddingTop="8dp"-->
-<!--                tools:text="1234"-->
-<!--                android:layout_gravity="center"/>-->
+        <!--        <LinearLayout-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_weight="1"-->
+        <!--            android:orientation="vertical">-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:theme="@style/Upper_text"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:text="Active" />-->
+        <!--            <ImageView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:src="@drawable/active"-->
+        <!--                app:tint="@color/dark_red"-->
+        <!--                android:layout_gravity="center"/>-->
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:paddingTop="8dp"-->
+        <!--                tools:text="1234"-->
+        <!--                android:layout_gravity="center"/>-->
 
 
-<!--        </LinearLayout>-->
+        <!--        </LinearLayout>-->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
-                android:theme="@style/Upper_text"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/recovered" />
+                android:text="@string/recovered"
+                android:theme="@style/Upper_text" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/outline_healing_black_36"
-                app:tint="@color/healing"
-                android:layout_gravity="center"/>
+                app:tint="@color/healing" />
+
             <TextView
                 android:id="@+id/recoveredC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:paddingTop="8dp"
                 android:textColor="@color/healing"
-                tools:text="1234"
-                android:layout_gravity="center"/>
+                tools:text="1234" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
-                android:theme="@style/Upper_text"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/death" />
+                android:text="@string/death"
+                android:theme="@style/Upper_text" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:src="@drawable/death"
-                app:tint="@color/death"
-                android:layout_gravity="center"/>
+                app:tint="@color/death" />
+
             <TextView
                 android:id="@+id/deathC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:paddingTop="8dp"
-                tools:text="1234"
                 android:textColor="@color/death"
-                android:layout_gravity="center"/>
+                tools:text="1234" />
 
         </LinearLayout>
     </LinearLayout>

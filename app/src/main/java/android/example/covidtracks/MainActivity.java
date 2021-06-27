@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView recoveredC;
     private TextView deathC;
     private RequestQueue requestQueue;
-    View loadingIndicator;
     private TextView emptyText;
 
     private final static String REQUEST_URL = "https://api.covid19india.org/data.json";
@@ -50,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         emptyText = findViewById(R.id.empty_view);
-        View loadingIndicator = findViewById(R.id.loading_indicator);
 
         requestQueue = requestSingleton.getInstance(this).getmRequestQueue();
 
@@ -62,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         listView.setEmptyView(emptyText);
         Log.d("myapp","length : "+StateWiseList.size());
         jsonParsing();
-        loadingIndicator.setVisibility(View.GONE);
     }
 
     public void setDataAdapter(){
